@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <div id="banner-intro">
+        <div class="banner-content">
+            <img src="assets/afzal.jpg" class="thumbnail" alt="user avatar">
+            <h2 style="border-bottom: none !important">
+                <span>Syed Afzal </span>
+            </h2>
+            <h4>Building applications that can ease life.</h4>
+            <i class="fas fa-angle-double-down bounce"></i>
+        </div>
+    </div>
+
+    <div class="box-title">
+        <h2>Education & Experience</h2>
+    </div>
+    <div id="education-experience" class="main-card">
+        <div class="ribbon"><span class="fold top left"></span>
+            <div class="box">
+                <div class="experience" style="margin-top: 2em">
+                    <img src="assets/svgs/education.svg" alt="user experience">
+                </div>
+
+                <div class="content">
+                    <p>
+                        <span class="q">Working Years of Experience : </span>
+                        <span> 2 plus years </span>
+                    </p>
+
+                    <div class="current-organization">
+                        <p>
+                            <span class="q">Current Organization : </span>
+                            <span>Avanza Solutions</span>
+                        </p>
+                        <p>
+                            <span class="q">Role : </span>
+                            <span>Software Engineer - March-2019 - Currently Working</span>
+                        </p>
+                    </div>
+
+
+                    <div class="previous-organizations">
+                        <p class="q-ti">
+                            Previous Organizations:
+                        </p>
+
+                        <p>
+                            <span class="q">Qavi Technologies : </span>
+                            <span>JavaScript Developer - Feb 2018 - March 2019</span>
+                        </p>
+
+                        <p>
+                            <span class="q">Codenvoi : </span>
+                            <span>Jr. Software Developer - Dec 2016 - Feb 2018</span>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="experience">
+                    <img src="assets/svgs/experience.svg" alt="user education">
+                </div>
+
+                <div class="content">
+                    <p>
+                        <span class="q">Bachelors (16 years) : </span>
+                        <span>Bachelor of Science in Computer Science - University of Karachi (2014 - 2017)</span>
+                    </p>
+                </div>
+
+                <div class="experience">
+                    <img src="assets/svgs/user-education.svg" alt="user education">
+                </div>
+
+                <div class="content">
+                    <p>
+                        <span class="q">Award : </span>
+                        <span>Project of the Batch (Web Development) from Arena Multimedia</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="box-title">
+        <h2>Skills</h2>
+    </div>
+    <div id="skills" class="main-card">
+        <div class="ribbon"><span class="fold top left"></span>
+            <div class="box">
+                <div class="experience" style="margin-top: 2em">
+                    <img src="assets/svgs/user-experience.svg" alt="user experience">
+                </div>
+
+                <div class="content">
+                    <p>
+                        <span class="q">Languages : </span>
+                        <span> JavaScript, TypeScript </span>
+                    </p>
+
+                    <p>
+                        <span class="q">Client Side (Front-End) : </span>
+                        <span> HTML5 , CSS, CSS3 , SASS , LESS </span>
+                    </p>
+
+                    <p>
+                        <span class="q">Languages : </span>
+                        <span> JavaScript, TypeScript </span>
+                    </p>
+
+                    <p>
+                        <span class="q">Database : </span>
+                        <span> MongoDB, (Redis, LokiJS) In-Memory Deatabase </span>
+                    </p>
+
+                    <p>
+                        <span class="q">Frameworks And Libraries : </span>
+                        <span> AngularJS, Angular 2+, ReactJs , Vue , jQuery , Node.js , Express.js </span>
+                    </p>
+
+                    <p>
+                        <span class="q">Version Controlling : </span>
+                        <span> Git </span>
+                    </p>
+
+                    <p>
+                        <span class="q">Server and Deployment : </span>
+                        <span> AWS EC2 , S3 , Nginx , CI , AWS Lambda , Jenkins, PM2 </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-title">
+        <h2>Open Source</h2>
+    </div>
+    <div class="main-card">
+        <div class="ribbon-open-source"
+             v-on:click.prevent.stop="open(href.href)"
+             v-for="href in openSourceLinks">
+            <span class="fold-open-source top left"></span>
+            <div class="box">
+                <a href="">
+                    <span>{{ href.title }}</span>
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="connect">
+        <div>
+            <div class="connect"></div>
+            <h2>Get Connect</h2>
+            <div class="social-bar">
+                <a class="link" v-for="link in socialLinks" v-bind:href="link.link" target="__black">
+                    <i v-bind:class="link.icon" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            socialLinks : [
+                {
+                    value: 'sah.afzal@gmail.com',
+                    icon: 'fas  fa-envelope',
+                    link: 'mailto:sah.afzal@gmail.com'
+                },
+                {
+                    value: 'Karachi, Pakistan',
+                    icon: 'fas fa-map-marker',
+                    link: 'https://goo.gl/maps/WcuoS1ejpDQ2'
+                },
+                {
+                    value: 'syed.afzal.1293',
+                    icon: 'fab fa-facebook',
+                    link: 'https://www.facebook.com/syed.afzal.1293'
+                },
+                {
+                    value: 'muzammilbilwani',
+                    icon: 'fab fa-linkedin',
+                    link: 'https://www.linkedin.com/in/syed-afzal-003b4395/'
+                },
+                {
+                    value: '123afzal',
+                    icon: 'fab fa-github',
+                    link: 'https://github.com/123afzal'
+                },
+                {
+                    value: 'syed-afzal',
+                    icon: 'fab fa-stack-overflow',
+                    link: 'https://stackoverflow.com/users/7635552/syed-afzal'
+                }
+            ],
+            openSourceLinks : [
+                {
+                    title: 'Oauth2 Server',
+                    href: 'https://github.com/123afzal/oauth2-server',
+                },
+                {
+                    title: 'Node Starter',
+                    href: 'https://github.com/123afzal/node_starter',
+                }
+            ]
+    },
+        methods: {
+            open(link) {
+                window.open(link, '_blank')
+            }
+        }
+    })
+</script>
+
+
+</body>
+</html>

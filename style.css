@@ -1,0 +1,256 @@
+/*css for banner*/
+#banner-intro {
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom: 2px;
+    background: url("./assets/banner.jpg") no-repeat center center fixed;
+}
+#banner-intro .banner-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+#banner-intro .banner-content h2 {
+    font-family: "Calibri", sans-serif;
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 0;
+    padding-bottom: 8px;
+    color: white;
+    text-align: center;
+}
+#banner-intro .banner-content h4 {
+    font-family: "Calibri", sans-serif;
+    line-height: 27px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    padding-bottom: 42px;
+}
+#banner-intro .banner-content i {
+    font-size: 3em;
+    color: white;
+    align-content: flex-end;
+}
+#banner-intro .thumbnail {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+    margin-top: 3em;
+}
+
+/*common css*/
+.main-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 45em;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+/*css for ribbon*/
+.ribbon, .ribbon-open-source {
+    background-color: #4abc96;
+    position: relative;
+    line-height: 40px;
+    padding: 0 20px;
+    color: #fff;
+    width: 100%;
+}
+.ribbon .box p, .ribbon-open-source .box p {
+    margin: 0;
+}
+.ribbon .box .experience, .ribbon-open-source .box .experience {
+    width: 100%;
+}
+.ribbon .box .experience img, .ribbon-open-source .box .experience img {
+    width: 50px;
+    height: 50px;
+}
+.ribbon .box .content .q, .ribbon-open-source .box .content .q {
+    color: #2b6762;
+}
+.ribbon .box .content .q-ti, .ribbon-open-source .box .content .q-ti {
+    color: #f4e028;
+}
+.fold, .fold-open-source {
+    position: absolute;
+    border-style: solid;
+}
+.fold.top, .fold-open-source.top {
+    top: 0;
+}
+.fold.top.left, .fold-open-source.top.left {
+    left: 0;
+    border-width: 22px 22px 0 0;
+    border-color: #fff #ffe600 #ffe600 #ffe600;
+}
+.ribbon-open-source {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #24292e;
+    padding: 10px;
+    margin-bottom: 1em;
+}
+.ribbon-open-source a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.ribbon-open-source a i {
+    font-size: 20px;
+    margin-left: 1em;
+}
+.fold-open-source.top.left {
+    left: 0;
+    border-width: 22px 22px 0 0;
+    border-color: #fff #4abc96 #4abc96 #4abc96;
+}
+
+
+.fold {
+    position: absolute;
+    border-style: solid;
+}
+.fold.top {
+    top: 0;
+}
+.fold.top.left {
+    left: 0;
+    border-width: 22px 22px 0 0;
+    border-color: #fff #ffe600 #ffe600 #ffe600;
+}
+
+/*css for footer*/
+.connect {
+    background: #f8f7f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.connect .social-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.connect .social-bar .link {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    margin: 1em;
+    color: #033c38;
+}
+.connect .social-bar .link i {
+    margin-right: 1em;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.connect .social-bar .link i:hover {
+    transform: scale(1.2);
+    color: #00bcd4;
+}
+.connect .connect-icon {
+    background: url("./assets/svgs/connect.svg") no-repeat center;
+    height: 5em;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/*css for bouncy icon*/
+.bounce {
+    display: inline-block;
+    position: relative;
+    -moz-animation: bounce 0.5s infinite linear;
+    -o-animation: bounce 0.5s infinite linear;
+    -webkit-animation: bounce 0.5s infinite linear;
+    animation: bounce 0.5s infinite linear;
+}
+@-webkit-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-moz-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-o-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-ms-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+
+/*golobal css*/
+
+h2 {
+    font-family: 'Calibri', sans-serif;
+    font-size: 36px;
+    line-height: 38px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    border-bottom: #00bcd4 6px solid;
+    padding-bottom: 10px;
+    color: #5b4c5c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+}
+
+body {
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.hand {
+    cursor: pointer;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
