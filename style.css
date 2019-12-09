@@ -235,6 +235,10 @@ h2 {
     margin: 2em auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
